@@ -39,7 +39,7 @@
 
 .main-container {
   display: flex;
-  width: 1000px;
+  width: 90%;
   height: 80%;
   margin: 0 auto;
   transform: translateY(2%);
