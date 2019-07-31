@@ -3,7 +3,7 @@ import { Scrollbar } from "react-scrollbars-custom";
 import "./imageText.css";
 import HDButton from "./HDButton";
 
-const ImageText = ({ title, exp, setHD }) => {
+const ImageText = ({ title, exp, hdVisState }) => {
   return (
     <div className="main-text-div">
       <h3>{title}</h3>
@@ -15,7 +15,7 @@ const ImageText = ({ title, exp, setHD }) => {
           <p>{exp}</p>
         </Scrollbar>
       </div>
-      <HDButton setHD={setHD} />
+      <HDButton hdVisState={hdVisState} />
     </div>
   );
 };

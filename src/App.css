@@ -58,4 +58,20 @@
   position: absolute;
   z-index: 10;
   visibility: hidden;
+  transition-duration: 0.3s;
+}
+
+.close-button {
+  height: 35px;
+  width: 35px;
+  border-radius: 17.5px;
+  font-weight: bold;
+  color: #fff;
+  background-color: crimson;
+  border: none;
+  float: right;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  outline: none;
 }
