@@ -1,0 +1,18 @@
+.hd-button {
+  width: 150px;
+  padding: 12.5px 0;
+  float: right;
+  top: 15%;
+  background-color: steelblue;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  outline: none;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.hd-button:hover {
+  background-color: dodgerblue;
+}
