@@ -2,8 +2,17 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Picture from "./components/Picture";
 import ImageText from "./components/ImageText";
+import { Container } from "semantic-ui-react";
 
 import "./App.css";
+
+const head = document.head;
+const link = document.createElement("link");
+link.type = "text/css";
+link.rel = "stylesheet";
+link.href = "cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css";
+
+head.appendChild(link);
 
 function App() {
   const [picState, setPicState] = useState();
@@ -21,7 +30,9 @@ function App() {
       )
       .then(res => {
         setPicState(res.data.url);
-        setCopyRightState(res.data.copyright);
+        setCopyRightState(
+          res.data.copyright ? res.data.copyright : "NASA/CXC/SAO"
+        );
         setPhotoDateState(res.data.date);
         setTitleState(res.data.title);
         setExpState(res.data.explanation);
@@ -45,14 +56,14 @@ function App() {
         </button>
       </div>
       <h1>NASA Photo of the Day</h1>
-      <div className="main-container">
+      <Container className="main-container">
         <Picture
           url={picState}
           copyright={copyrightState}
           date={photoDateState}
         />
         <ImageText title={titleState} exp={expState} hdVisState={hdVisState} />
-      </div>
+      </Container>
     </div>
   );
 }

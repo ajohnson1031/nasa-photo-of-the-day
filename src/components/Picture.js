@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from "semantic-ui-react";
 import "./picture.css";
 
 const Picture = ({ url, copyright, date }) => {
@@ -8,7 +9,7 @@ const Picture = ({ url, copyright, date }) => {
         <p className="copyright">Copyright © {copyright}</p>
         <p className="photo-date">{date}</p>
       </div>
-      <img src={url} alt="From NASA" />;
+      <Image src={url} alt="From NASA" />;
     </div>
   );
 };
